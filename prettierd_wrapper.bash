@@ -11,6 +11,12 @@ then
     exit 1
 fi
 
+if ! test -f $1
+then
+    echo 'file does not exist...'
+    exit 1
+fi
+
 res=$(cat $1 | prettierd $1)
 
 if [ "$?" = '0' ]
