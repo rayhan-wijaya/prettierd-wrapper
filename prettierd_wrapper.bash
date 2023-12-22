@@ -5,6 +5,12 @@ hash prettierd 2>/dev/null || {
     exit 1
 }
 
+if [ "$1" = "" ]
+then
+    echo "please provide a file..."
+    exit 1
+fi
+
 res=$(cat $1 | prettierd $1)
 
 if [ "$?" = "0" ]
