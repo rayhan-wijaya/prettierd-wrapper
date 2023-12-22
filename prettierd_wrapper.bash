@@ -17,14 +17,14 @@ then
     exit 1
 fi
 
-res=$(cat $1 | prettierd $1)
+res="$(cat $1 | prettierd $1)"
 
 if [ "$?" = '0' ]
 then
-    echo $res > $1
+    echo "$res" > $1
 else
     echo 'something went wrong...'
-    echo $res
+    echo "$res"
 
     exit 1
 fi
