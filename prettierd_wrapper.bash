@@ -1,7 +1,7 @@
 #!/bin/bash
 
 hash prettierd 2>/dev/null || {
-    echo >&2 "prettierd could not be found; please install"
+    echo >&2 "prettierd could not be found; please install..."
     exit 1
 }
 
